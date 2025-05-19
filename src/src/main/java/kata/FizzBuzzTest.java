@@ -24,6 +24,13 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void convertAvec5()
+    {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Assert.assertEquals("buzz", fizzBuzz.convert(5));
+    }
+
+    @Test
     public void convertAvec0()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();

@@ -19,7 +19,11 @@ public class FizzBuzz {
        if (nombre == 3) {
            return "fizz";
        }
-           else {
+       else if (nombre == 5)
+       {
+            return "buzz";
+       }
+       else {
             return Integer.toString(nombre);
         }
     }
