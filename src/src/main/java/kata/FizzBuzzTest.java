@@ -10,7 +10,7 @@ public class FizzBuzzTest {
      * Lorsque il y a 1 en entrée, la fonction renvoie 1
      */
     @Test
-    public void convertAvec1()
+    public void shouldBeNumber()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();
          Assert.assertEquals("1", fizzBuzz.convert(1));
@@ -28,18 +28,17 @@ public class FizzBuzzTest {
     public void shouldBuzz()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        Assert.assertEquals("buzz", fizzBuzz.convert(5));
-    }
-
-    @Test
-    public void shouldBuzz10()
-    {
-        FizzBuzz fizzBuzz = new FizzBuzz();
         Assert.assertEquals("buzz", fizzBuzz.convert(10));
     }
 
     @Test
-    public void shouldBeNumber()
+    public void shouldFizzBuzz()
+    {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Assert.assertEquals("fizzbuzz", fizzBuzz.convert(15));
+    }
+    @Test
+    public void shouldBe0()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();
         Assert.assertEquals("0", fizzBuzz.convert(0));

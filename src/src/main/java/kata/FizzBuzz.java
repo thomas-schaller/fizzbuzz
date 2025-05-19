@@ -16,18 +16,18 @@ public class FizzBuzz {
      */
     String convert(int nombre)
     {
-        if (nombre == 0) {
-        return "0";
-    }
-       else if (nombre % 3 == 0) {
-           return "fizz";
+        StringBuilder result = new StringBuilder();
+       if (nombre % 3 == 0) {
+           result = new StringBuilder("fizz");
        }
-       else if (nombre % 5 == 0)
+       if (nombre % 5 == 0)
        {
-            return "buzz";
+           result.append("buzz");
        }
-       else {
-            return Integer.toString(nombre);
-        }
+       if (nombre == 0 || result.isEmpty())
+       {
+           result = new StringBuilder(Integer.toString(nombre));
+       }
+      return result.toString();
     }
 }
