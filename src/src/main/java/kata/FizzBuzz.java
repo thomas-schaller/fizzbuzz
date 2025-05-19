@@ -14,10 +14,13 @@ public class FizzBuzz {
      * @param nombre
      * @return
      */
-    int convert(int nombre)
+    String convert(int nombre)
     {
-        if ( nombre == 1 )
-            return 1;
-        return 2;
+       if (nombre == 3) {
+           return "fizz";
+       }
+           else {
+            return Integer.toString(nombre);
+        }
     }
 }

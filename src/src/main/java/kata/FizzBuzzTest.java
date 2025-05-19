@@ -13,13 +13,20 @@ public class FizzBuzzTest {
     public void convertAvec1()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();
-         Assert.assertEquals(1, fizzBuzz.convert(1));
+         Assert.assertEquals("1", fizzBuzz.convert(1));
     }
 
     @Test
-    public void convertAvec2()
+    public void convertAvec3()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        Assert.assertEquals(2, fizzBuzz.convert(2));
+        Assert.assertEquals("fizz", fizzBuzz.convert(3));
+    }
+
+    @Test
+    public void convertAvec0()
+    {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Assert.assertEquals("0", fizzBuzz.convert(0));
     }
 }
