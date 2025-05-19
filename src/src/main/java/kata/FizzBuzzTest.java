@@ -21,21 +21,21 @@ public class FizzBuzzTest {
     public void shouldFizz()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        Assert.assertEquals("fizz", fizzBuzz.convert(6));
+        Assert.assertEquals(FizzBuzz.FIZZ, fizzBuzz.convert(6));
     }
 
     @Test
     public void shouldBuzz()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        Assert.assertEquals("buzz", fizzBuzz.convert(10));
+        Assert.assertEquals(FizzBuzz.BUZZ, fizzBuzz.convert(10));
     }
 
     @Test
     public void shouldFizzBuzz()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        Assert.assertEquals("fizzbuzz", fizzBuzz.convert(15));
+        Assert.assertEquals(FizzBuzz.FIZZ + FizzBuzz.BUZZ, fizzBuzz.convert(15));
     }
     @Test
     public void shouldBe0()
@@ -43,5 +43,13 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         Assert.assertEquals("0", fizzBuzz.convert(0));
     }
+
+    @Test
+    public void shouldFizzBecause3()
+    {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Assert.assertEquals(FizzBuzz.FIZZ, fizzBuzz.convert(31));
+    }
+
 
 }
