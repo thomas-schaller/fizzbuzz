@@ -16,6 +16,8 @@ public class FizzBuzz {
      */
     int convert(int nombre)
     {
-        return 1;
+        if ( nombre == 1 )
+            return 1;
+        return 2;
     }
 }
