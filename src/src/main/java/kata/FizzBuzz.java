@@ -13,7 +13,7 @@ public class FizzBuzz {
     }
 
     /**
-     * fonction qui en fonction du paramètre renvoie:
+     * fonction qui selon le paramètre renvoie:
      * - fizz si le nombre en paramètre est divisible par 3,
      * - buzz si le nombre est divisible par 5
      * - fizz si le nombre contient un 3
@@ -25,19 +25,21 @@ public class FizzBuzz {
     String convert(int nombre)
     {
         StringBuilder result = new StringBuilder();
+        String nombreEnChaine = Integer.toString(nombre);
        if (nombre % 3 == 0) {
            result = new StringBuilder(FIZZ);
        }
+
+        if (nombreEnChaine.chars().mapToObj(Character::toString).anyMatch("3"::equals)) {
+            result.append(FIZZ);
+        }
        if (nombre % 5 == 0)
        {
            result.append(BUZZ);
        }
-
-       String nombreEnChaine = Integer.toString(nombre);
-       if (nombreEnChaine.chars().mapToObj(Character::toString).anyMatch("3"::equals)) {
-        result.append(FIZZ);
-       }
-
+        if (nombreEnChaine.chars().mapToObj(Character::toString).anyMatch("5"::equals)) {
+            result.append(BUZZ);
+        }
        if (nombre == 0 || result.isEmpty())
        {
            result = new StringBuilder(nombreEnChaine);
