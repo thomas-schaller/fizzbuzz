@@ -1,9 +1,12 @@
 package kata;
 
+import java.util.stream.IntStream;
+
 public class FizzBuzz {
 
     public static void main(String [] args){
-
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        IntStream.range(0,100).forEach(a -> System.out.println(fizzBuzz.convert(a)));
     }
 
     /**
@@ -18,11 +21,11 @@ public class FizzBuzz {
     {
         StringBuilder result = new StringBuilder();
        if (nombre % 3 == 0) {
-           result = new StringBuilder("fizz");
+           result = new StringBuilder("Fizz");
        }
        if (nombre % 5 == 0)
        {
-           result.append("buzz");
+           result.append("Buzz");
        }
        if (nombre == 0 || result.isEmpty())
        {
